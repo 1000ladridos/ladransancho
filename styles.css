@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: rgb(224, 244, 244);
+}
+
+header{
+    display: none;
+}
+
+.contenedorGeneral{
+    background-color: rgb(232, 240, 246);
+}
+
+header{
+    background-color: rgb(206, 214, 221);
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+main h2{
+    color: rgb(103, 33, 168);
+    text-shadow: 1px 1px 1px rgb(58, 24, 90);
+    padding: 1rem;
+}
+
+main p{
+    text-align: center;
+    padding: 0.5rem;
+}
+
+footer{
+    text-align: center;
+}
+
+main img{
+    width: 70%;
+    padding: 1rem;
+}
+
+main iframe{
+    width: 80%;
+    padding: 2rem;
+}
+
+@media screen and (min-width:992px){
+        header{
+            display: block;
+            }
+        header nav ul{
+            list-style: none;
+            display: flex;
+            gap: 1rem ;
+        }
+        .contenedorHeader{
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .contenedorNav{
+            background-color: rgb(59, 62, 63);
+            display: flex;
+            justify-content: center;
+        }
+        main{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr) ;
+            grid-template-rows: 100px repeat(2, 50vh) auto ;
+            grid-template-areas: 
+                'h2 h2'
+                'iframe p'
+                'img1 img2'
+                'img3 img4';
+        }
+        main h2{
+            grid-area: h2;
+        }
+        main p{
+            grid-area: p;
+        }
+        main iframe{
+            grid-area: iframe;
+        }
+        main .galeria-img-1{
+            grid-area: img1;
+        }
+        main .galeria-img-2{
+            grid-area: img2;
+        }
+        main galeria-img-3{
+            grid-area: img3;
+        }
+        main galeria-img-4{
+            grid-area: img4;
+        }
+}
