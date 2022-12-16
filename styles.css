@@ -104,18 +104,59 @@ footer h4 a{
 
 .contenedorMainContacto{
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
+    grid-template-columns: 1fr ;
+    grid-template-rows: repeat(5, 1fr) ;
     grid-template-areas: 
-    '';
+    'nombre'
+    'apellido'
+    'mail'
+    'telefono'
+    'textarea';
     height: 400px;
     background-color: black;
     border-radius: 8px;
-    margin: 70px 1rem 100px 1rem;
+    margin: 70px 0px 60px 0px;
+    padding: 25px ;
+}
+
+.contenedorNombre{
+    grid-area: nombre;
+    display: flex;
+    margin: 10px;
+}
+
+.contenedorApellido{
+    grid-area: apellido;
+    display: flex;
+    margin: 10px;
+}
+
+.contenedorMail{
+    grid-area: mail;
+    display: flex;
+    margin: 10px;
+}
+
+.contenedorTelefono{
+    grid-area: telefono;
+    display: flex;
+    margin: 10px;
+}
+
+.contenedorTextarea{
+    grid-area: textarea;
+    display: flex;
+    margin: 25px 15px 20px 10px ;
 }
 
 label{
     color: rgb(255, 255, 255);
+}
+
+.contenedorRedes{
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 45px;
 }
 
 /*estilos de about*/
@@ -149,6 +190,10 @@ label{
     box-shadow: 0px 2px 1px black;
 }
 
+.contenedorSections ul li a{
+    color: black;
+    text-decoration: none;
+}
 .seccionGraffity,.seccionIlustracion,.seccionPasteup,.seccionTattoo{
     display: none;
 }
@@ -183,7 +228,23 @@ label{
     margin-top: 45px;
 }
 
+/*estilos de seccionGraffity*/
 
+.contenedorGraffity{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 25px;
+    margin:35px 0px 45px 0px;
+}
+
+/*estilos de seccionIlustracion*/
+.contenedorIlustracion{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    gap: 25px;
+    margin:35px 0px 45px 0px;}
 /*estilos del home en tablet*/
 
 @media screen and (min-width:768px){
