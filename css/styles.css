@@ -186,7 +186,7 @@ label{
 /*estilos de about*/
 
 .imgAbout{
-    height: fit-content;
+    height: auto;
     width: 90%;
     margin: 30px 15px 10px 25px;
     border: 15px solid rgb(0, 0, 0);
@@ -440,6 +440,7 @@ main p{
         'h2 h2'
         'imgAbout p';
         height: 70%;
+        width: auto;
         align-items: center;
         margin-bottom: 60px;
         justify-content: center;
