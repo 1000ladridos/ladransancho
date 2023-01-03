@@ -1,0 +1,62 @@
+@import '_variables.scss';
+
+footer{
+    color:$color-white ;
+    background-color: $color-black;
+    height: 25%;
+    padding-top: 15px;
+    text-align: center;
+
+    .contenedorFooter{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 20px;
+    }
+
+    h4{
+        a{
+            text-decoration: none;
+            color:$color-white; 
+        }
+    }
+}
+
+@mixin button($button: rgb(106, 106, 106)) {
+    background: $button;
+    border:1px solid $color-white;
+    color: $color-white;
+    padding: 5px 10px;
+}
+
+.link1{
+    @include button;
+}
+
+.link2{
+    @include button($button:#ff9900)
+}
+
+.link3{
+    @include button($button:#32CD32)
+}
+
+.link4{
+    @include button($button:#FF00FF)
+}
+
+%copyright {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: rgb(66, 66, 66);
+    background-color:$color-black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px
+}
+
+.copyright{
+    @extend %copyright;
+}
